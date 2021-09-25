@@ -182,6 +182,30 @@
 	},
 /turf/open/floor/wood/large,
 /area/space)
+"lD" = (
+/obj/machinery/camera{
+	c_tag = "Green Team";
+	network = list("thunder");
+	pixel_x = 12;
+	pixel_y = -10;
+	resistance_flags = 64
+	},
+/obj/effect/landmark/thunderdome/one,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/arena_spawn/red{
+	arena_id = "arena_alternate"
+	},
+/turf/open/indestructible,
+/area/space)
 "lE" = (
 /turf/open/floor/plating/dirt,
 /area/space)
@@ -238,6 +262,12 @@
 	},
 /turf/open/floor/wood/large,
 /area/space)
+"pn" = (
+/obj/machinery/computer/tournament_controller{
+	arena_id = "arena_alternate"
+	},
+/turf/open/floor/wood/large,
+/area/space)
 "pO" = (
 /obj/effect/landmark/thunderdome/two,
 /obj/effect/turf_decal/stripes/line{
@@ -279,7 +309,7 @@
 /area/space)
 "sa" = (
 /obj/effect/landmark/arena/start{
-	landmark_tag = "cornerA2"
+	arena_id = "arena_alternate"
 	},
 /turf/open/floor/plating,
 /area/space)
@@ -591,6 +621,30 @@
 /obj/structure/chair/stool/directional/north,
 /turf/open/floor/wood/large,
 /area/space)
+"Hr" = (
+/obj/machinery/camera{
+	c_tag = "Red Team";
+	network = list("thunder");
+	pixel_x = 11;
+	pixel_y = -9;
+	resistance_flags = 64
+	},
+/obj/effect/landmark/thunderdome/two,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/arena_spawn/green{
+	arena_id = "arena_alternate"
+	},
+/turf/open/indestructible,
+/area/space)
 "Iv" = (
 /obj/structure/mirror/directional/east{
 	icon_state = "mirror_broke"
@@ -770,12 +824,12 @@
 /turf/open/floor/plastic,
 /area/space)
 "Sh" = (
-/obj/machinery/computer/arena,
+/obj/machinery/computer/tournament_controller,
 /turf/open/floor/wood/large,
 /area/space)
 "Sr" = (
 /obj/effect/landmark/arena/end{
-	landmark_tag = "cornerB2"
+	arena_id = "arena_alternate"
 	},
 /turf/open/floor/plating,
 /area/space)
@@ -6463,7 +6517,7 @@ oK
 Cr
 Zy
 sw
-QD
+Hr
 sw
 sw
 gg
@@ -7915,7 +7969,7 @@ yP
 ZC
 ZX
 yI
-Xv
+lD
 yI
 yI
 lX
@@ -8184,7 +8238,7 @@ PB
 PB
 PB
 vQ
-Sh
+pn
 vQ
 kD
 kD
