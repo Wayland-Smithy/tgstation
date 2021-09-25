@@ -17,28 +17,19 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 	///An assoc list of quirks that can be obtained as a hardcore character, and their hardcore value.
 	var/list/hardcore_quirks = list()
 
-	var/static/list/quirks_blacklist = list(
-		list("Blind","Nearsighted"),
-		list("Jolly","Depression","Apathetic","Hypersensitive"),
-		list("Ageusia","Vegetarian","Deviant Tastes"),
-		list("Ananas Affinity","Ananas Aversion"),
-		list("Alcohol Tolerance","Light Drinker"),
-		list("Clown Fan","Mime Fan"),
-		list("Bad Touch", "Friendly"),
-		list("Extrovert", "Introvert"),
-	)
-
 /datum/controller/subsystem/processing/quirks/Initialize(timeofday)
-	get_quirks()
-	return ..()
-
-/// Returns the list of possible quirks
-/datum/controller/subsystem/processing/quirks/proc/get_quirks()
-	RETURN_TYPE(/list)
-	if (!quirks.len)
+	if(!quirks.len)
 		SetupQuirks()
 
-	return quirks
+	quirk_blacklist = list(list("Blind","Nearsighted"), \
+							list("Jolly","Depression","Apathetic","Hypersensitive"), \
+							list("Ageusia","Vegetarian","Deviant Tastes"), \
+							list("Ananas Affinity","Ananas Aversion"), \
+							list("Alcohol Tolerance","Light Drinker"), \
+							list("Clown Fan","Mime Fan"), \
+							list("Bad Touch", "Friendly"), \
+							list("Extrovert", "Introvert"))
+	return ..()
 
 /datum/controller/subsystem/processing/quirks/proc/SetupQuirks()
 	// Sort by Positive, Negative, Neutral; and then by name

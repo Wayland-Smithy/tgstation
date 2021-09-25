@@ -53,8 +53,6 @@
 /obj/projectile/mega_arachnid
 	name = "flesh snare"
 	nodamage = TRUE
-
-
 	damage = 0
 	icon_state = "tentacle_end"
 
@@ -69,5 +67,5 @@
 	desc = "Used by mega arachnids to immobilize their prey."
 	item_flags = DROPDEL
 	flags_1 = NONE
-	icon_state = "flesh_snare"
-	armed = TRUE
+	icon_state = "tentacle_end"
+	icon = 'icons/obj/guns/projectiles.dmi'

@@ -27,8 +27,11 @@
 /obj/item/circuit_component/sdql_operation/proc/execute_sdql(datum/port/input/port)
 	var/operation = sdql_operation.value
 
-	if(!operation)
+	if(GLOB.AdminProcCaller || !operation)
 		return
 
-	var/result = HandleUserlessSDQL(parent.get_creator(), operation)
+	GLOB.AdminProcCaller = "CHAT_[parent.display_name]" //_ won't show up in ckeys so it'll never match with a real admin
+	var/list/result = world.SDQL2_query(operation, parent.get_creator_admin(), parent.get_creator())
+	GLOB.AdminProcCaller = null
+
 	results.set_output(result)

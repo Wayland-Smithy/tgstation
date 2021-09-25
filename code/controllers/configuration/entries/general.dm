@@ -533,5 +533,3 @@
 /datum/config_entry/number/hard_deletes_overrun_limit
 	default = 0
 	min_val = 0
-
-/datum/config_entry/str_list/motd

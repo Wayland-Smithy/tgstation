@@ -64,13 +64,13 @@
 		/mob/living/simple_animal/pet/cat,
 		/mob/living/simple_animal/mouse,
 		/mob/living/simple_animal/chicken,
-		/mob/living/basic/cow,
+		/mob/living/simple_animal/cow,
 		/mob/living/simple_animal/hostile/lizard,
 		/mob/living/simple_animal/pet/fox,
 		/mob/living/simple_animal/butterfly,
 		/mob/living/simple_animal/pet/cat/cak,
 		/mob/living/simple_animal/chick,
-		/mob/living/basic/cow/wisdom,
+		/mob/living/simple_animal/cow/wisdom,
 		/obj/item/skub,
 		/obj/item/food/american_sausage
 	)

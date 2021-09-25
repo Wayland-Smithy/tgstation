@@ -125,9 +125,6 @@
 	if(prob(50))
 		new /obj/effect/spawner/lootdrop/refreshing_beverage(src)
 	if(prob(40))
-		if(prob(50))
-			new /obj/item/food/pizzaslice/moldy/bacteria(src)
-		else
-			new /obj/item/food/breadslice/moldy/bacteria(src)
+		new /obj/item/food/pizzaslice/moldy(src)
 	else if(prob(30))
 		new /obj/item/food/syndicake(src)

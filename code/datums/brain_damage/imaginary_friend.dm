@@ -43,7 +43,7 @@
 	get_ghost()
 
 /datum/brain_trauma/special/imaginary_friend/proc/make_friend()
-	friend = new(get_turf(owner), owner)
+	friend = new(get_turf(owner), src)
 
 /datum/brain_trauma/special/imaginary_friend/proc/get_ghost()
 	set waitfor = FALSE

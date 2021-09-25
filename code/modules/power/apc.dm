@@ -266,7 +266,7 @@
 		area.power_change()
 	QDEL_NULL(alarm_manager)
 	if(occupier)
-		malfvacate(TRUE)
+		malfvacate(1)
 	if(wires)
 		QDEL_NULL(wires)
 	if(cell)
@@ -1147,12 +1147,10 @@
 		occupier.parent = malf.parent
 	else
 		occupier.parent = malf
-	malf.shunted = TRUE
+	malf.shunted = 1
 	occupier.eyeobj.name = "[occupier.name] (AI Eye)"
 	if(malf.parent)
 		qdel(malf)
-	for(var/obj/item/pinpointer/nuke/disk_pinpointers in GLOB.pinpointer_list)
-		disk_pinpointers.switch_mode_to(TRACK_MALF_AI) //Pinpointer will track the shunted AI
 	var/datum/action/innate/core_return/CR = new
 	CR.Grant(occupier)
 	occupier.cancel_camera()
@@ -1162,7 +1160,7 @@
 		return
 	if(occupier.parent && occupier.parent.stat != DEAD)
 		occupier.mind.transfer_to(occupier.parent)
-		occupier.parent.shunted = FALSE
+		occupier.parent.shunted = 0
 		occupier.parent.setOxyLoss(occupier.getOxyLoss())
 		occupier.parent.cancel_camera()
 		qdel(occupier)
@@ -1172,11 +1170,9 @@
 			occupier.forceMove(drop_location())
 			occupier.death()
 			occupier.gib()
-
-	if(!occupier.nuking) //Pinpointers go back to tracking the nuke disk, as long as the AI (somehow) isn't mid-nuking.
-		for(var/obj/item/pinpointer/nuke/disk_pinpointers in GLOB.pinpointer_list)
-			disk_pinpointers.switch_mode_to(TRACK_NUKE_DISK)
-			disk_pinpointers.alert = FALSE
+			for(var/obj/item/pinpointer/nuke/P in GLOB.pinpointer_list)
+				P.switch_mode_to(TRACK_NUKE_DISK) //Pinpointers go back to tracking the nuke disk
+				P.alert = FALSE
 
 /obj/machinery/power/apc/transfer_ai(interaction, mob/user, mob/living/silicon/ai/AI, obj/item/aicard/card)
 	if(card.AI)
@@ -1489,7 +1485,7 @@
 	operating = FALSE
 	atom_break()
 	if(occupier)
-		malfvacate(TRUE)
+		malfvacate(1)
 	update()
 
 // overload all the lights in this APC area

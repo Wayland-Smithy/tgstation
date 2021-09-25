@@ -25,7 +25,6 @@
 	///Unlike speak_emote, the list of things in this variable only show by themselves with no spoken text. IE: Ian barks, Ian yaps
 	var/list/emote_see = list()
 
-	///ticks up every time `handle_automated_movement()` is called, which is every 2 seconds at the time of documenting. 1  turns per move is 1 movement every 2 seconds.
 	var/turns_per_move = 1
 	var/turns_since_move = 0
 	///Use this to temporarely stop random movement or to if you write special movement code for animals.
@@ -666,10 +665,10 @@
 	if (pulledby || shouldwakeup)
 		toggle_ai(AI_ON)
 
-/mob/living/simple_animal/on_changed_z_level(turf/old_turf, turf/new_turf)
+/mob/living/simple_animal/onTransitZ(old_z, new_z)
 	..()
 	if (AIStatus == AI_Z_OFF)
-		SSidlenpcpool.idle_mobs_by_zlevel[old_turf?.z] -= src
+		SSidlenpcpool.idle_mobs_by_zlevel[old_z] -= src
 		toggle_ai(initial(AIStatus))
 
 ///This proc is used for adding the swabbale element to mobs so that they are able to be biopsied and making sure holograpic and butter-based creatures don't yield viable cells samples.

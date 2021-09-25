@@ -17,11 +17,9 @@
 
 /// Handles updating the container when the reagents change.
 /obj/item/reagent_containers/blood/on_reagent_change(datum/reagents/holder, ...)
-	var/datum/reagent/blood/new_reagent = holder.has_reagent(/datum/reagent/blood)
-	if(new_reagent && new_reagent.data && new_reagent.data["blood_type"])
-		blood_type = new_reagent.data["blood_type"]
-	else if(holder.has_reagent(/datum/reagent/consumable/liquidelectricity))
-		blood_type = "LE"
+	var/datum/reagent/blood/B = holder.has_reagent(/datum/reagent/blood)
+	if(B && B.data && B.data["blood_type"])
+		blood_type = B.data["blood_type"]
 	else
 		blood_type = null
 	return ..()
@@ -30,7 +28,7 @@
 	. = ..()
 	if(labelled)
 		return
-	name = "blood pack[blood_type ? " - [blood_type]" : null]"
+	name = "blood_pack[blood_type ? " - [blood_type]" : null]"
 
 /obj/item/reagent_containers/blood/random
 	icon_state = "random_bloodpack"
@@ -68,20 +66,19 @@
 /obj/item/reagent_containers/blood/universal
 	blood_type = "U"
 
-/obj/item/reagent_containers/blood/attackby(obj/item/tool, mob/user, params)
-	if (istype(tool, /obj/item/pen) || istype(tool, /obj/item/toy/crayon))
+/obj/item/reagent_containers/blood/attackby(obj/item/I, mob/user, params)
+	if (istype(I, /obj/item/pen) || istype(I, /obj/item/toy/crayon))
 		if(!user.is_literate())
 			to_chat(user, span_notice("You scribble illegibly on the label of [src]!"))
 			return
-		var/custom_label = stripped_input(user, "What would you like to label the blood pack?", name, null, 53)
+		var/t = stripped_input(user, "What would you like to label the blood pack?", name, null, 53)
 		if(!user.canUseTopic(src, BE_CLOSE))
 			return
-		if(user.get_active_held_item() != tool)
+		if(user.get_active_held_item() != I)
 			return
-		if(custom_label)
+		if(t)
 			labelled = TRUE
-			name = "blood pack - [custom_label]"
-			balloon_alert(user, "new label set")
+			name = "blood pack - [t]"
 		else
 			labelled = FALSE
 			update_name()

@@ -16,7 +16,7 @@
 
 	var/locked = FALSE
 
-/datum/component/shell/Initialize(unremovable_circuit_components, capacity, shell_flags, starting_circuit)
+/datum/component/shell/Initialize(unremovable_circuit_components, capacity, shell_flags)
 	. = ..()
 	if(!ismovable(parent))
 		return COMPONENT_INCOMPATIBLE
@@ -24,9 +24,6 @@
 	src.shell_flags = shell_flags || src.shell_flags
 	src.capacity = capacity || src.capacity
 	set_unremovable_circuit_components(unremovable_circuit_components)
-
-	if(starting_circuit)
-		attach_circuit(starting_circuit)
 
 /datum/component/shell/RegisterWithParent()
 	RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, .proc/on_attack_by)
