@@ -90,7 +90,7 @@
 /area/awaymission/cabin/snowforest)
 "cj" = (
 /obj/effect/landmark/arena/end{
-	landmark_tag = "cornerB2"
+	arena_id = "arena_alternate"
 	},
 /turf/open/floor/stone,
 /area/space)
@@ -201,7 +201,7 @@
 /turf/open/floor/wood,
 /area/space)
 "fE" = (
-/obj/machinery/computer/arena,
+/obj/machinery/computer/tournament_controller,
 /turf/open/floor/wood/large,
 /area/tdome/arena)
 "fH" = (
@@ -468,7 +468,9 @@
 	resistance_flags = 64
 	},
 /obj/effect/landmark/thunderdome/two,
-/obj/machinery/arena_spawn/green,
+/obj/machinery/arena_spawn/green{
+	arena_id = "arena_alternate"
+	},
 /turf/open/floor/stone,
 /area/space)
 "nq" = (
@@ -480,7 +482,9 @@
 	resistance_flags = 64
 	},
 /obj/effect/landmark/thunderdome/one,
-/obj/machinery/arena_spawn/red,
+/obj/machinery/arena_spawn/red{
+	arena_id = "arena_alternate"
+	},
 /turf/open/floor/stone,
 /area/space)
 "nw" = (
@@ -750,7 +754,7 @@
 /area/space)
 "un" = (
 /obj/effect/landmark/arena/start{
-	landmark_tag = "cornerA2"
+	arena_id = "arena_alternate"
 	},
 /turf/open/floor/stone,
 /area/space)
@@ -835,7 +839,7 @@
 /turf/open/floor/wood,
 /area/space)
 "wE" = (
-/obj/machinery/computer/arena,
+/obj/machinery/computer/tournament_controller,
 /turf/open/floor/stone,
 /area/space)
 "wM" = (
