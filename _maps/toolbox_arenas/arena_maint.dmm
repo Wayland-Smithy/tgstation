@@ -1,0 +1,356 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aO" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"bP" = (
+/obj/machinery/light/dim,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"cz" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"ex" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"eA" = (
+/obj/structure/fluff/paper/stack,
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"fU" = (
+/obj/effect/spawner/structure/window/reinforced/indestructable,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"fX" = (
+/obj/item/trash/candy,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"go" = (
+/obj/item/paper/crumpled/bloody/fluff/stations/lavaland/mailroom/waiting,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"hp" = (
+/obj/structure/fluff/paper/stack,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"hB" = (
+/turf/closed/wall,
+/area/tdome/arena)
+"hO" = (
+/obj/structure/closet/crate/mail,
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"iR" = (
+/obj/effect/spawner/structure/window/reinforced/indestructable,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"kD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"od" = (
+/obj/structure/disposalpipe/segment{
+	dir = 9
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"ot" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"oW" = (
+/obj/machinery/disposal/delivery_chute,
+/obj/structure/disposalpipe/trunk,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"sP" = (
+/obj/machinery/light/dim,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"tR" = (
+/obj/machinery/light/small,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"vk" = (
+/obj/structure/closet/crate/mail,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"zx" = (
+/obj/item/paper/crumpled/bloody/fluff/stations/lavaland/mailroom,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"BI" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	opacity = 0
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"Cz" = (
+/obj/machinery/light/dim{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"Dp" = (
+/obj/structure/closet/crate/mail,
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"DE" = (
+/obj/structure/fluff/paper/stack,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"EK" = (
+/obj/structure/disposalpipe/trunk,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/disposal/delivery_chute,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"Qw" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"QK" = (
+/turf/open/floor/plating,
+/area/tdome/arena)
+"Rw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"Um" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/fluff/paper/stack,
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"Va" = (
+/obj/item/trash/cheesie,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
+/area/tdome/arena)
+"WK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"Xf" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"YP" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet/crate/mail/full,
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"ZB" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	opacity = 0
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+"ZD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/tdome/arena)
+
+(1,1,1) = {"
+hB
+ZB
+hB
+hB
+hB
+hB
+ZB
+hB
+"}
+(2,1,1) = {"
+Cz
+QK
+iR
+Qw
+QK
+iR
+fX
+sP
+"}
+(3,1,1) = {"
+oW
+Rw
+iR
+QK
+QK
+iR
+EK
+Rw
+"}
+(4,1,1) = {"
+hB
+BI
+hB
+ZB
+hB
+hB
+hB
+BI
+"}
+(5,1,1) = {"
+QK
+kD
+Xf
+QK
+iR
+Dp
+YP
+od
+"}
+(6,1,1) = {"
+QK
+ZD
+aO
+ot
+fU
+eA
+hp
+zx
+"}
+(7,1,1) = {"
+QK
+WK
+WK
+QK
+hB
+oW
+od
+QK
+"}
+(8,1,1) = {"
+Cz
+WK
+WK
+QK
+ZB
+QK
+DE
+tR
+"}
+(9,1,1) = {"
+QK
+WK
+WK
+QK
+hB
+oW
+Rw
+QK
+"}
+(10,1,1) = {"
+QK
+WK
+WK
+QK
+iR
+go
+WK
+QK
+"}
+(11,1,1) = {"
+QK
+WK
+cz
+ot
+fU
+vk
+hO
+Um
+"}
+(12,1,1) = {"
+hB
+BI
+hB
+ZB
+hB
+hB
+hB
+BI
+"}
+(13,1,1) = {"
+oW
+od
+iR
+QK
+QK
+iR
+EK
+od
+"}
+(14,1,1) = {"
+Cz
+QK
+iR
+ex
+QK
+iR
+Va
+bP
+"}
+(15,1,1) = {"
+hB
+ZB
+hB
+hB
+hB
+hB
+ZB
+hB
+"}
