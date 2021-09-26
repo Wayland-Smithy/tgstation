@@ -84,24 +84,18 @@
 /area/tdome
 	name = "Thunderdome"
 	icon_state = "yellow"
-	static_lighting = TRUE
-	requires_power = FALSE
+	static_lighting = FALSE
+	base_lighting_alpha = 255
 	has_gravity = STANDARD_GRAVITY
 	flags_1 = NONE
 
 /area/tdome/arena
 	name = "Thunderdome Arena"
 	icon_state = "thunder"
-	static_lighting = FALSE
-	base_lighting_alpha = 255
-
 
 /area/tdome/arena_source
 	name = "Thunderdome Arena Template"
 	icon_state = "thunder"
-	static_lighting = FALSE
-	base_lighting_alpha = 255
-
 
 /area/tdome/tdome1
 	name = "Thunderdome (Team 1)"
