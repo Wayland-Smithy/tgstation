@@ -120,11 +120,12 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 
 			if (!ishuman(contestant_mob))
 				contestant_mob = new
-				contestant_mob.key = client?.key
 
 			client?.prefs?.apply_prefs_to(contestant_mob)
 			contestant_mob.equipOutfit(team.outfit)
 			contestant_mob.forceMove(pick(valid_team_spawns[index]))
+			contestant_mob.key = client?.key
+			contestant_mob.reset_perspective()
 
 		index += 1
 

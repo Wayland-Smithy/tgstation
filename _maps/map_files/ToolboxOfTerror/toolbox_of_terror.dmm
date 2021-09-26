@@ -839,7 +839,9 @@
 /turf/open/floor/wood,
 /area/space)
 "wE" = (
-/obj/machinery/computer/tournament_controller,
+/obj/machinery/computer/tournament_controller{
+	arena_id = "arena_alternate"
+	},
 /turf/open/floor/stone,
 /area/space)
 "wM" = (
