@@ -90,6 +90,24 @@ const RoundInfo = (props, context) => {
             Spawn teams
           </Button>
         </Stack.Item>
+
+        <Stack.Item>
+          <Button
+            icon="door-closed"
+            onClick={() => act("close_shutters")}
+          >
+            Close shutters
+          </Button>
+        </Stack.Item>
+
+        <Stack.Item>
+          <Button
+            icon="door-open"
+            onClick={() => act("open_shutters")}
+          >
+            Open shutters
+          </Button>
+        </Stack.Item>
       </Stack>
     </Section>
   );

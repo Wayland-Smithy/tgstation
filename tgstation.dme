@@ -3934,6 +3934,9 @@
 #include "interface\skin.dmf"
 #include "modular_event\station_traits.dm"
 #include "modular_event\jobs\jobs.dm"
+#include "modular_event\tournament\arena_spawn.dm"
 #include "modular_event\tournament\controller.dm"
+#include "modular_event\tournament\shutters.dm"
 #include "modular_event\tournament\teams.dm"
+#include "modular_event\tournament\toolbox.dm"
 // END_INCLUDE

@@ -409,6 +409,3 @@
 			to_chat(user,span_warning("You're not on the team list."))
 			return
 		C.spawn_member(src,user.ckey,team)
-
-#undef ARENA_GREEN_TEAM
-#undef ARENA_RED_TEAM

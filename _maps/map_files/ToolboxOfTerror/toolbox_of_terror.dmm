@@ -15,8 +15,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/item/storage/toolbox{
-	color = "green"
+/obj/effect/landmark/toolbox{
+	arena_id = "arena_alternate;
+	team_id = "green"
 	},
 /turf/open/floor/wood,
 /area/space)
@@ -32,8 +33,8 @@
 /area/awaymission/cabin/snowforest)
 "aO" = (
 /obj/structure/rack,
-/obj/item/storage/toolbox{
-	color = "red"
+/obj/effect/landmark/toolbox{
+	arena_id = "arena_alternate"
 	},
 /turf/open/floor/wood,
 /area/space)
@@ -236,6 +237,10 @@
 /obj/effect/turf_decal/loading_area{
 	dir = 4
 	},
+/obj/machinery/door/poddoor{
+	id = "arena_alternate";
+	name = "Thunderdome Blast Door"
+	},
 /turf/open/floor/wood,
 /area/space)
 "gg" = (
@@ -245,6 +250,10 @@
 	},
 /obj/effect/turf_decal/loading_area{
 	dir = 8
+	},
+/obj/machinery/door/poddoor{
+	id = "arena_alternate";
+	name = "Thunderdome Blast Door"
 	},
 /turf/open/floor/wood,
 /area/space)
@@ -372,6 +381,20 @@
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
+	},
+/turf/open/floor/wood,
+/area/space)
+"kA" = (
+/obj/machinery/door/poddoor{
+	id = "arena_alternate";
+	name = "Thunderdome Blast Door"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 4
+	},
+/obj/machinery/door/poddoor{
+	id = "arena_alternate";
+	name = "Thunderdome Blast Door"
 	},
 /turf/open/floor/wood,
 /area/space)
@@ -822,19 +845,12 @@
 	},
 /turf/open/floor/carpet/red,
 /area/awaymission/cabin/snowforest)
-"wh" = (
-/obj/structure/rack,
-/obj/item/storage/toolbox{
-	color = "green"
-	},
-/obj/effect/turf_decal/stripes/line,
-/turf/open/floor/wood,
-/area/space)
 "wp" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/stripes/line,
-/obj/item/storage/toolbox{
-	color = "green"
+/obj/effect/landmark/toolbox{
+	arena_id = "arena_alternate;
+	team_id = "green"
 	},
 /turf/open/floor/wood,
 /area/space)
@@ -925,7 +941,9 @@
 /area/tdome/arena)
 "AS" = (
 /obj/structure/rack,
-/obj/item/storage/toolbox,
+/obj/effect/landmark/toolbox{
+	team_id = "green"
+	},
 /turf/open/floor/wood/large{
 	icon_state = "wood_large-broken2"
 	},
@@ -951,7 +969,7 @@
 /area/tdome/arena)
 "BG" = (
 /obj/structure/rack,
-/obj/item/storage/toolbox,
+/obj/effect/landmark/toolbox,
 /turf/open/floor/wood/large,
 /area/tdome/tdome1)
 "BK" = (
@@ -1135,7 +1153,9 @@
 /area/awaymission/cabin/snowforest)
 "FA" = (
 /obj/structure/rack,
-/obj/item/storage/toolbox,
+/obj/effect/landmark/toolbox{
+	team_id = "green"
+	},
 /turf/open/floor/wood/large{
 	icon_state = "wood_large-broken"
 	},
@@ -1171,7 +1191,9 @@
 /area/awaymission/cabin/snowforest)
 "Gu" = (
 /obj/structure/rack,
-/obj/item/storage/toolbox,
+/obj/effect/landmark/toolbox{
+	team_id = "green"
+	},
 /turf/open/floor/wood/large,
 /area/tdome/tdome2)
 "GA" = (
@@ -8329,7 +8351,7 @@ iU
 iU
 rE
 bR
-wh
+wp
 QH
 Ix
 Ix
@@ -8973,7 +8995,7 @@ QH
 QH
 QH
 fZ
-fZ
+kA
 fZ
 fZ
 fZ

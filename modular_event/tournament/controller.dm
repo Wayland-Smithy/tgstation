@@ -1,3 +1,4 @@
+/// Tournament controllers mapped to arena ID
 GLOBAL_LIST_EMPTY(tournament_controllers)
 
 /// Controller for the tournament
@@ -8,7 +9,16 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 	/// The arena ID to be looking for
 	var/arena_id = ARENA_DEFAULT_ID
 
+	var/list/contestants = list()
+	var/list/toolboxes = list()
+
 	var/list/valid_team_spawns = list()
+
+	/// Shutters that separate teams from the arena
+	var/list/obj/machinery/door/poddoor/arena_shutters = list()
+
+	/// The places to spawn toolboxes
+	var/list/toolbox_spawns = list()
 
 	var/static/list/arena_templates
 
@@ -45,6 +55,12 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 		return .
 
 	switch (action)
+		if ("close_shutters")
+			close_shutters()
+			return TRUE
+		if ("open_shutters")
+			open_shutters()
+			return TRUE
 		if ("load_arena")
 			load_arena(usr, params["arena_template"])
 			return TRUE
@@ -68,6 +84,21 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 	var/turf/corner_b = get_landmark_turf(ARENA_CORNER_B)
 	return locate(min(corner_a.x, corner_b.x), min(corner_a.y, corner_b.y), corner_a.z)
 
+/obj/machinery/computer/tournament_controller/proc/close_shutters()
+	for(var/obj/machinery/door/poddoor/door in arena_shutters)
+		INVOKE_ASYNC(door, /obj/machinery/door/poddoor.proc/close)
+
+/obj/machinery/computer/tournament_controller/proc/open_shutters()
+	for(var/obj/machinery/door/poddoor/door in arena_shutters)
+		INVOKE_ASYNC(door, /obj/machinery/door/poddoor.proc/open)
+
+/obj/machinery/computer/tournament_controller/proc/get_arena_turfs()
+	var/load_point = get_load_point()
+	var/turf/corner_a = get_landmark_turf(ARENA_CORNER_A)
+	var/turf/corner_b = get_landmark_turf(ARENA_CORNER_B)
+	var/turf/high_point = locate(max(corner_a.x, corner_b.x),max(corner_a.y, corner_b.y), corner_a.z)
+	return block(load_point, high_point)
+
 /obj/machinery/computer/tournament_controller/proc/load_arena_templates()
 	var/arena_dir = "_maps/toolbox_arenas/"
 	var/list/default_arenas = flist(arena_dir)
@@ -86,7 +117,9 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 		to_chat(user, span_warning("The arena \"[arena_template_name]\" does not exist."))
 		return
 
-	// MOTHBLOCKS TODO: clear_arena()
+	clear_arena()
+	close_shutters()
+
 	var/turf/corner_a = get_landmark_turf(ARENA_CORNER_A)
 	var/turf/corner_b = get_landmark_turf(ARENA_CORNER_B)
 	var/width = abs(corner_a.x - corner_b.x) + 1
@@ -106,6 +139,13 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 	message_admins("[key_name_admin(user)] loaded [arena_template_name] event arena for [arena_id] arena.")
 	log_admin("[key_name(user)] loaded [arena_template_name] event arena for [arena_id] arena.")
 
+/obj/machinery/computer/tournament_controller/proc/clear_arena()
+	for (var/turf/arena_turf in get_arena_turfs())
+		arena_turf.empty(turf_type = /turf/open/floor/plating)
+
+	QDEL_LIST(contestants)
+	QDEL_LIST(toolboxes)
+
 /obj/machinery/computer/tournament_controller/proc/spawn_teams(mob/user, list/team_names)
 	var/index = 1
 
@@ -115,17 +155,26 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 			to_chat(user, span_warning("Couldn't find team: [team_name]"))
 			return
 
-		for (var/client/client as anything in team.get_clients())
-			var/mob/living/carbon/human/contestant_mob = client?.mob
+		var/team_spawn_id = valid_team_spawns[index]
 
-			if (!ishuman(contestant_mob))
-				contestant_mob = new
+		var/list/clients = team.get_clients()
+
+		for (var/client/client as anything in clients)
+			var/old_mob = client?.mob
+			var/mob/living/carbon/human/contestant_mob = new
 
 			client?.prefs?.apply_prefs_to(contestant_mob)
 			contestant_mob.equipOutfit(team.outfit)
-			contestant_mob.forceMove(pick(valid_team_spawns[index]))
+			// MOTHBLOCKS TODO: Spawn in the setup room beforehand?
+			contestant_mob.forceMove(pick(valid_team_spawns[team_spawn_id]))
 			contestant_mob.key = client?.key
 			contestant_mob.reset_perspective()
+
+			qdel(old_mob)
+
+			contestants += contestant_mob
+
+		spawn_toolboxes(team.toolbox_color, team_spawn_id, clients.len)
 
 		index += 1
 
@@ -133,30 +182,15 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 	message_admins("[key_name_admin(user)] [message]")
 	log_admin("[key_name(user)] [message]")
 
-/obj/machinery/arena_spawn/LateInitialize()
-	. = ..()
+/obj/machinery/computer/tournament_controller/proc/spawn_toolboxes(toolbox_color, team_spawn_id, number_to_spawn)
+	var/list/spawns = toolbox_spawns[team_spawn_id]
+	spawns = spawns.Copy()
 
-	var/obj/machinery/computer/tournament_controller/tournament_controller = GLOB.tournament_controllers[arena_id]
-	if (isnull(tournament_controller))
-		stack_trace("Arena spawn had an invalid arena_id: \"[arena_id]\"")
-		qdel(src)
-		return
+	for (var/_ in 1 to number_to_spawn)
+		var/obj/spawn_landmark = pick_n_take(spawns)
 
-	var/list/spawn_locations = list()
+		var/obj/item/storage/toolbox/toolbox = new
+		toolbox.color = toolbox_color
+		toolbox.forceMove(get_turf(spawn_landmark))
 
-	var/area/area = get_area(src)
-	for (var/obj/effect/landmark/thunderdome/thunderdome_landmark in area)
-		spawn_locations += get_turf(thunderdome_landmark)
-
-	tournament_controller.valid_team_spawns += list(spawn_locations)
-
-/obj/effect/landmark/thunderdome/one/Initialize()
-	..()
-	return INITIALIZE_HINT_NORMAL
-
-/obj/effect/landmark/thunderdome/two/Initialize()
-	..()
-	return INITIALIZE_HINT_NORMAL
-
-/obj/machinery/arena_spawn/attack_ghost(mob/user)
-	return
+		toolboxes += toolbox
