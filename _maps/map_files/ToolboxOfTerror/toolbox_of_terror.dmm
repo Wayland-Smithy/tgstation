@@ -491,7 +491,7 @@
 	resistance_flags = 64
 	},
 /obj/effect/landmark/thunderdome/two,
-/obj/machinery/arena_spawn/green{
+/obj/machinery/tournament_spawn/green{
 	arena_id = "arena_alternate"
 	},
 /turf/open/floor/stone,
@@ -505,7 +505,7 @@
 	resistance_flags = 64
 	},
 /obj/effect/landmark/thunderdome/one,
-/obj/machinery/arena_spawn/red{
+/obj/machinery/tournament_spawn/red{
 	arena_id = "arena_alternate"
 	},
 /turf/open/floor/stone,
@@ -1422,7 +1422,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/arena_spawn/green,
+/obj/machinery/tournament_spawn/green,
 /turf/open/indestructible,
 /area/tdome/tdome2)
 "Pq" = (
@@ -1437,7 +1437,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/arena_spawn/red,
+/obj/machinery/tournament_spawn/red,
 /turf/open/indestructible,
 /area/tdome/tdome1)
 "Ps" = (
