@@ -22,6 +22,7 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 
 	var/static/list/arena_templates
 
+	var/countdown_started = FALSE
 	var/loading = FALSE
 
 /obj/machinery/computer/tournament_controller/Initialize(mapload, obj/item/circuitboard/C)
@@ -60,6 +61,9 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 			return TRUE
 		if ("open_shutters")
 			open_shutters()
+			return TRUE
+		if ("start_countdown")
+			start_countdown(usr)
 			return TRUE
 		if ("load_arena")
 			load_arena(usr, params["arena_template"])

@@ -16,7 +16,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/toolbox{
-	arena_id = "arena_alternate;
+	arena_id = "arena_alternate";
 	team_id = "green"
 	},
 /turf/open/floor/wood,
@@ -849,7 +849,7 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/landmark/toolbox{
-	arena_id = "arena_alternate;
+	arena_id = "arena_alternate";
 	team_id = "green"
 	},
 /turf/open/floor/wood,

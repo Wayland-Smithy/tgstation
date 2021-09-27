@@ -108,6 +108,15 @@ const RoundInfo = (props, context) => {
             Open shutters
           </Button>
         </Stack.Item>
+
+        <Stack.Item>
+          <Button.Confirm
+            content="Start countdown"
+            icon="stopwatch"
+            onClick={() => act("start_countdown")}
+            tooltip="This will open the shutters at the end of the countdown."
+          />
+        </Stack.Item>
       </Stack>
     </Section>
   );

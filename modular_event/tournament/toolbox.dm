@@ -18,7 +18,7 @@
 
 	tournament_controller = GLOB.tournament_controllers[arena_id]
 	if (isnull(tournament_controller))
-		stack_trace("Arena spawn had an invalid arena_id: \"[arena_id]\"")
+		stack_trace("Toolbox spawn had an invalid arena_id: \"[arena_id]\"")
 		qdel(src)
 		return
 
