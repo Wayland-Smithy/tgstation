@@ -172,3 +172,6 @@
 	var/body_position_pixel_x_offset = 0
 	///The x amount a mob's sprite should be offset due to the current position they're in
 	var/body_position_pixel_y_offset = 0
+
+	/// TOOLBOX ARENA AHEAL ACTION. GRANTED TO MOB LIVING ON CLIENT LOGIN / SEE login.dm
+	var/datum/action/cooldown/arena_aheal/arena_action = new
