@@ -26,4 +26,3 @@
 		changeling.regain_powers()
 
 	med_hud_set_status()
-	arena_action.Grant(src)
