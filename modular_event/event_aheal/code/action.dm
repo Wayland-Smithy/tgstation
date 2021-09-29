@@ -4,7 +4,7 @@
  */
 /datum/action/cooldown/arena_aheal
 	name = "Heal Self"
-	button_icon = 'modular_event/event_aheal/icons/button.dmi'
+	icon_icon = 'modular_event/event_aheal/icons/button.dmi'
 	button_icon_state = "arena_heal"
 	cooldown_time = 30 SECONDS
 
