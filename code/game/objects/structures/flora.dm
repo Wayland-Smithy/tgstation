@@ -371,6 +371,18 @@
 	icon_state = "plant-25"
 	trimmable = FALSE
 
+/obj/item/kirbyplants/crypt
+	icon = 'icons/obj/crypt.dmi'
+	icon_state = "pot"
+	name = "pot"
+	desc = "You can imagine this has a few treasures within it."
+	trimmable = FALSE
+
+/obj/item/kirbyplants/crypt/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+	. = ..()
+	new /obj/item/rupee(get_turf(src))
+	qdel(src)
+
 /obj/item/kirbyplants/photosynthetic
 	name = "photosynthetic potted plant"
 	desc = "A bioluminescent plant."
