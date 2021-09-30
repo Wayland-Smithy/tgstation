@@ -153,10 +153,29 @@
 	desc = "Wild animals are not pets. Respect their wildness.";
 	name = "DO NOT FEED THE MONKEYS"
 	},
-/turf/open/floor/wood,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/wood/end,
+/turf/closed/wall/mineral/wood{
+	opacity = 0
+	},
 /area/tdome/arena)
 "R" = (
 /turf/open/water/jungle,
+/area/tdome/arena)
+"S" = (
+/obj/structure/plaque/static_plaque{
+	desc = "Wild animals are not pets. Respect their wildness.";
+	name = "DO NOT FEED THE MONKEYS"
+	},
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood/end{
+	dir = 1
+	},
+/turf/closed/wall/mineral/wood{
+	opacity = 0
+	},
 /area/tdome/arena)
 "T" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -267,7 +286,7 @@ C
 d
 C
 j
-O
+S
 "}
 (9,1,1) = {"
 n
