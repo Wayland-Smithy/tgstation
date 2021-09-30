@@ -10,7 +10,8 @@
 /turf/open/floor/plating/dirt/jungle,
 /area/tdome/arena)
 "d" = (
-/obj/structure/flora/tree/jungle{
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/stump{
 	mouse_opacity = 0
 	},
 /turf/open/floor/plating/grass/jungle,
@@ -73,7 +74,9 @@
 /area/tdome/arena)
 "s" = (
 /obj/structure/flora/ausbushes/lavendergrass,
-/mob/living/carbon/human/species/monkey,
+/mob/living/carbon/human/species/monkey{
+	ai_controller = null
+	},
 /turf/open/floor/plating/grass/jungle,
 /area/tdome/arena)
 "t" = (
@@ -129,9 +132,7 @@
 /turf/open/water/jungle,
 /area/tdome/arena)
 "I" = (
-/obj/structure/flora/tree/jungle/small{
-	mouse_opacity = 0
-	},
+/obj/structure/flora/tree/jungle/small,
 /turf/open/floor/plating/grass/jungle,
 /area/tdome/arena)
 "J" = (
@@ -148,6 +149,19 @@
 /obj/structure/railing/corner,
 /turf/open/floor/plating/grass/jungle,
 /area/tdome/arena)
+"N" = (
+/obj/structure/plaque/static_plaque{
+	desc = "Wild animals are not pets. Respect their wildness.";
+	name = "DO NOT FEED THE MONKEYS"
+	},
+/obj/effect/turf_decal/siding/wood,
+/obj/effect/turf_decal/siding/wood/end{
+	dir = 1
+	},
+/turf/closed/wall/mineral/wood{
+	opacity = 0
+	},
+/area/tdome/arena)
 "O" = (
 /obj/structure/plaque/static_plaque{
 	desc = "Wild animals are not pets. Respect their wildness.";
@@ -161,21 +175,13 @@
 	opacity = 0
 	},
 /area/tdome/arena)
+"Q" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/open/floor/plating/grass/jungle,
+/area/tdome/arena)
 "R" = (
 /turf/open/water/jungle,
-/area/tdome/arena)
-"S" = (
-/obj/structure/plaque/static_plaque{
-	desc = "Wild animals are not pets. Respect their wildness.";
-	name = "DO NOT FEED THE MONKEYS"
-	},
-/obj/effect/turf_decal/siding/wood,
-/obj/effect/turf_decal/siding/wood/end{
-	dir = 1
-	},
-/turf/closed/wall/mineral/wood{
-	opacity = 0
-	},
 /area/tdome/arena)
 "T" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -198,14 +204,16 @@
 /turf/open/floor/plating/grass/jungle,
 /area/tdome/arena)
 "Y" = (
-/mob/living/carbon/human/species/monkey,
+/mob/living/carbon/human/species/monkey{
+	ai_controller = null
+	},
 /turf/open/floor/plating/grass/jungle,
 /area/tdome/arena)
 "Z" = (
-/obj/structure/flora/junglebush/large{
+/obj/structure/flora/tree/jungle{
 	mouse_opacity = 0
 	},
-/turf/open/floor/plating/grass/jungle,
+/turf/open/floor/plating/dirt/jungle,
 /area/tdome/arena)
 
 (1,1,1) = {"
@@ -222,7 +230,7 @@ a
 t
 D
 m
-Z
+u
 y
 U
 H
@@ -250,16 +258,16 @@ k
 "}
 (5,1,1) = {"
 u
+m
 u
 u
-u
-I
+m
 u
 y
 y
 "}
 (6,1,1) = {"
-u
+I
 i
 u
 s
@@ -272,7 +280,7 @@ U
 v
 r
 u
-C
+Q
 C
 C
 M
@@ -281,12 +289,12 @@ c
 (8,1,1) = {"
 O
 V
-u
+m
 C
 d
-C
+Q
 j
-S
+N
 "}
 (9,1,1) = {"
 n
@@ -299,21 +307,21 @@ F
 J
 "}
 (10,1,1) = {"
-y
+Z
 y
 u
-u
+m
 Y
 C
 l
-u
+m
 "}
 (11,1,1) = {"
 G
 y
 u
 u
-I
+u
 u
 u
 u
@@ -323,7 +331,7 @@ g
 o
 y
 u
-u
+m
 B
 u
 m
@@ -343,7 +351,7 @@ R
 p
 G
 y
-Z
+u
 m
 D
 t
