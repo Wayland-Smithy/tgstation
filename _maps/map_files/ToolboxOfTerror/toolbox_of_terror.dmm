@@ -104,9 +104,6 @@
 /obj/structure/bookcase/random/adult,
 /turf/open/floor/wood/large,
 /area/awaymission/cabin/snowforest)
-"aZ" = (
-/turf/open/floor/plastic,
-/area/vip_only)
 "bh" = (
 /obj/structure/sink/kitchen{
 	dir = 8;
@@ -1229,9 +1226,6 @@
 	dir = 1
 	},
 /area/awaymission/cabin/snowforest)
-"nj" = (
-/turf/open/floor/carpet/red,
-/area/vip_only)
 "nl" = (
 /obj/structure/table/wood/fancy/black,
 /obj/machinery/chem_dispenser/drinks{
@@ -1715,6 +1709,9 @@
 /obj/structure/flora/junglebush/c,
 /turf/open/floor/grass,
 /area/awaymission/cabin/snowforest)
+"rn" = (
+/turf/closed/indestructible/wood,
+/area/vip_only)
 "rs" = (
 /obj/structure/closet/crate/grave/filled/lead_researcher,
 /turf/open/floor/grass,
@@ -1981,6 +1978,9 @@
 	icon_state = "wood_large-broken2"
 	},
 /area/awaymission/cabin/snowforest)
+"tQ" = (
+/turf/open/floor/plastic,
+/area/vip_only)
 "tS" = (
 /obj/structure/window/bronze/fulltile,
 /turf/open/floor/wood,
@@ -2417,6 +2417,10 @@
 	},
 /turf/open/floor/gravel,
 /area/awaymission/cabin/snowforest)
+"ys" = (
+/obj/machinery/door/airlock/bronze/trait_limited,
+/turf/open/floor/carpet/red,
+/area/vip_only)
 "yy" = (
 /obj/structure/chair/pew/right,
 /turf/open/floor/grass,
@@ -3716,6 +3720,9 @@
 	},
 /turf/open/floor/grass,
 /area/awaymission/cabin/snowforest)
+"Mg" = (
+/turf/open/floor/carpet/red,
+/area/vip_only)
 "Mh" = (
 /obj/structure/table/wood,
 /obj/item/clothing/gloves/botanic_leather{
@@ -4566,9 +4573,6 @@
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/grass,
 /area/awaymission/cabin/snowforest)
-"TY" = (
-/turf/closed/indestructible/wood,
-/area/vip_only)
 "TZ" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/plating/dirt,
@@ -29154,11 +29158,11 @@ LW
 LW
 LW
 Fr
-nj
+Mg
 xU
 wX
 xW
-aZ
+tQ
 ff
 By
 By
@@ -29283,12 +29287,12 @@ Fr
 LW
 LW
 LW
-LW
-nj
-nj
+ys
+Mg
+Mg
 xu
-nj
-aZ
+Mg
+tQ
 ff
 By
 By
@@ -29415,10 +29419,10 @@ LW
 LW
 Fr
 wW
-nj
-nj
-nj
-aZ
+Mg
+Mg
+Mg
+tQ
 ff
 By
 By
@@ -29546,9 +29550,9 @@ LW
 Fr
 wX
 xW
-nj
+Mg
 xU
-aZ
+tQ
 ff
 By
 By
@@ -29674,11 +29678,11 @@ LW
 LW
 LW
 Fr
-TY
+rn
 yb
-nj
-nj
-aZ
+Mg
+Mg
+tQ
 ff
 By
 By
@@ -29806,9 +29810,9 @@ LW
 fH
 xe
 yH
-nj
-nj
-aZ
+Mg
+Mg
+tQ
 ff
 By
 By
@@ -29936,9 +29940,9 @@ LW
 fH
 xe
 yH
-nj
-nj
-aZ
+Mg
+Mg
+tQ
 ff
 By
 By
@@ -30066,7 +30070,7 @@ wM
 fH
 xe
 yH
-nj
+Mg
 xU
 FC
 ff
@@ -30196,9 +30200,9 @@ LW
 fH
 xe
 yH
-nj
-nj
-aZ
+Mg
+Mg
+tQ
 ff
 By
 By
@@ -30326,9 +30330,9 @@ LW
 fH
 xe
 yH
-nj
-nj
-aZ
+Mg
+Mg
+tQ
 ff
 By
 By
@@ -30454,11 +30458,11 @@ LW
 LW
 LW
 Fr
-TY
+rn
 yI
-nj
-nj
-aZ
+Mg
+Mg
+tQ
 ff
 By
 By
@@ -30586,9 +30590,9 @@ LW
 Fr
 wX
 xW
-nj
+Mg
 xU
-aZ
+tQ
 ff
 By
 By
@@ -30715,10 +30719,10 @@ LW
 LW
 Fr
 xu
-nj
-nj
-nj
-aZ
+Mg
+Mg
+Mg
+tQ
 ff
 By
 By
@@ -30843,12 +30847,12 @@ Fr
 LW
 LW
 LW
-LW
-nj
-nj
+ys
+Mg
+Mg
 wW
-nj
-aZ
+Mg
+tQ
 ff
 By
 By
@@ -30974,11 +30978,11 @@ LW
 LW
 LW
 Fr
-nj
+Mg
 xU
 wX
 xW
-aZ
+tQ
 ff
 Bz
 By
