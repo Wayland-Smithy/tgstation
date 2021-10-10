@@ -28,6 +28,9 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 
 	var/static/list/arena_templates
 
+	/// HUD indexes indexed by team ID
+	var/static/list/team_hud_ids
+
 	var/countdown_started = FALSE
 	var/loading = FALSE
 
@@ -43,6 +46,9 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 	if (isnull(arena_templates))
 		arena_templates = list()
 		INVOKE_ASYNC(src, .proc/load_arena_templates)
+
+	if (isnull(team_hud_ids))
+		team_hud_ids = setup_team_huds()
 
 /obj/machinery/computer/tournament_controller/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -82,6 +88,10 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 			return TRUE
 		if ("spawn_teams")
 			spawn_teams(usr, list(params["team_a"], params["team_b"]))
+			return TRUE
+		if ("vv_teams")
+			if (usr.client)
+				usr.client.debug_variables(GLOB.tournament_teams)
 			return TRUE
 
 /obj/machinery/computer/tournament_controller/ui_state(mob/user)
@@ -163,7 +173,9 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 	QDEL_LIST(toolboxes)
 
 /obj/machinery/computer/tournament_controller/proc/spawn_teams(mob/user, list/team_names)
-	old_mobs.Cut()
+	QDEL_LIST(contestants)
+
+	var/list/new_old_mobs = list()
 
 	var/index = 1
 
@@ -174,14 +186,18 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 			return
 
 		var/team_spawn_id = valid_team_spawns[index]
-		old_mobs[team_spawn_id] = list()
+		new_old_mobs[team_spawn_id] = list()
 
 		var/list/clients = team.get_clients()
 
 		for (var/client/client as anything in clients)
 			var/mob/old_mob = client?.mob
-			if (isliving(old_mob))
-				old_mobs[team_spawn_id][client] = old_mob
+
+			if (client in old_mobs[team_spawn_id])
+				new_old_mobs[team_spawn_id][client] = old_mobs[team_spawn_id][client]
+				qdel(old_mob)
+			else if (isliving(old_mob))
+				new_old_mobs[team_spawn_id][client] = old_mob
 				old_mob.visible_message(span_notice("[old_mob] was teleported away to participate in the tournament!"))
 				playsound(get_turf(old_mob), 'sound/magic/wand_teleport.ogg', 50, TRUE)
 				old_mob.forceMove(src)
@@ -196,6 +212,8 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 
 			contestants += contestant_mob
 
+			assign_team_hud(contestant_mob, team_spawn_id)
+
 		spawn_toolboxes(team.toolbox_color, team_spawn_id, clients.len)
 
 		index += 1
@@ -203,6 +221,8 @@ GLOBAL_LIST_EMPTY(tournament_controllers)
 	var/message = "loaded [team_names.len] teams ([team_names.Join(", ")]) for [arena_id] arena."
 	message_admins("[key_name_admin(user)] [message]")
 	log_admin("[key_name(user)] [message]")
+
+	old_mobs = new_old_mobs
 
 /obj/machinery/computer/tournament_controller/proc/spawn_toolboxes(toolbox_color, team_spawn_id, number_to_spawn)
 	var/list/spawns = toolbox_spawns[team_spawn_id]

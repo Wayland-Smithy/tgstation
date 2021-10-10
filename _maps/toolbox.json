@@ -1,17 +1,18 @@
 {
 	"version": 1,
-    "map_name": "Nameless Manor",
+    "map_name": "Toole Manor",
     "map_path": "map_files/ToolboxOfTerror",
     "map_file": "toolbox_of_terror.dmm",
 	"traits": [
 		{
 			"Up": 1,
+			"Baseturf": "/turf/open/floor/plating",
 			"Linkage": "Cross"
 		},
 		{
 			"Up": 1,
 			"Down": -1,
-			"Baseturf": "/turf/open/floor/plating/",
+			"Baseturf": "/turf/open/openspace",
 			"Linkage": "Cross"
 		},
 		{

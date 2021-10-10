@@ -609,6 +609,7 @@
 					/obj/item/clothing/gloves/tackler/combat,
 					/obj/item/clothing/under/syndicate/rus_army,
 					/obj/item/clothing/under/costume/soviet,
+					/obj/item/clothing/under/costume/gruoutfit,
 					/obj/item/clothing/mask/russian_balaclava,
 					/obj/item/clothing/head/helmet/rus_ushanka,
 					/obj/item/clothing/suit/armor/vest/russian_coat,
@@ -924,15 +925,6 @@
 					/obj/machinery/power/grounding_rod)
 	crate_name = "grounding rod crate"
 	crate_type = /obj/structure/closet/crate/engineering/electrical
-
-/datum/supply_pack/engine/collector
-	name = "Radiation Collector Crate"
-	desc = "Contains three radiation collectors. Useful for collecting energy off nearby Supermatter Crystals, Singularities or Teslas!"
-	cost = CARGO_CRATE_VALUE * 8
-	contains = list(/obj/machinery/power/rad_collector,
-					/obj/machinery/power/rad_collector,
-					/obj/machinery/power/rad_collector)
-	crate_name = "collector crate"
 
 /datum/supply_pack/engine/solar
 	name = "Solar Panel Crate"
@@ -2327,7 +2319,7 @@
 
 /datum/supply_pack/costumes_toys/costume_original
 	name = "Original Costume Crate"
-	desc = "Reenact Shakespearean plays with this assortment of outfits. Contains eight different costumes!"
+	desc = "Reenact Shakespearean plays with this assortment of outfits. Contains ten different costumes!"
 	cost = CARGO_CRATE_VALUE * 2
 	contains = list(/obj/item/clothing/head/snowman,
 					/obj/item/clothing/suit/snowman,
@@ -2339,6 +2331,8 @@
 					/obj/item/clothing/suit/cardborg,
 					/obj/item/clothing/head/xenos,
 					/obj/item/clothing/suit/xenos,
+					/obj/item/clothing/suit/facebook,
+					/obj/item/clothing/suit/beaker,
 					/obj/item/clothing/suit/hooded/ian_costume,
 					/obj/item/clothing/suit/hooded/carp_costume,
 					/obj/item/clothing/suit/hooded/bee_costume)
@@ -2365,6 +2359,28 @@
 					/obj/item/storage/backpack/mime)
 	crate_name = "standard costume crate"
 	crate_type = /obj/structure/closet/crate/wooden
+
+/datum/supply_pack/costumes_toys/sixtiescostumes
+	name = "2460s Costume Crate"
+	desc = "Holy cheap prop auction Owlman!"
+	cost = CARGO_CRATE_VALUE * 2
+	contains = list(/obj/item/clothing/under/costume/twotonesuit,
+					/obj/item/clothing/under/costume/patchworksuit/skirt,
+					/obj/item/clothing/mask/gas/clown_hat,
+					/obj/item/clothing/under/costume/greenvest,
+					/obj/item/clothing/under/costume/trickster,
+					/obj/item/clothing/under/costume/penguin,
+					/obj/item/clothing/under/costume/purplesuit,
+					/obj/item/clothing/head/penguin,
+					/obj/item/clothing/head/trickster,
+					/obj/item/clothing/suit/trickstercoat,
+					/obj/item/clothing/suit/jestercoat,
+					/obj/item/clothing/under/costume/owl,
+					/obj/item/clothing/mask/gas/owl_mask,
+					/obj/item/clothing/suit/toggle/owlwings)
+	crate_name = "60s costume crate"
+	crate_type = /obj/structure/closet/crate/wooden
+
 
 /datum/supply_pack/costumes_toys/randomised/toys
 	name = "Toy Crate"

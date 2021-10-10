@@ -151,6 +151,10 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 	var/waittime_l = 600
 	/// What is the higher bound of when the roundstart annoucement is sent out?
 	var/waittime_h = 1800
+	
+	/// Maximum amount of threat allowed to generate.
+	var/max_threat_level = 100
+	
 
 /datum/game_mode/dynamic/admin_panel()
 	var/list/dat = list("<html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><title>Game Mode Panel</title></head><body><h1><B>Game Mode Panel</B></h1>")
@@ -308,7 +312,7 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 /// Generates the threat level using lorentz distribution and assigns peaceful_percentage.
 /datum/game_mode/dynamic/proc/generate_threat()
 	var/relative_threat = LORENTZ_DISTRIBUTION(threat_curve_centre, threat_curve_width)
-	threat_level = round(lorentz_to_amount(relative_threat), 0.1)
+	threat_level = clamp(round(lorentz_to_amount(relative_threat), 0.1), 0, max_threat_level)
 
 	peaceful_percentage = round(LORENTZ_CUMULATIVE_DISTRIBUTION(relative_threat, threat_curve_centre, threat_curve_width), 0.01)*100
 
@@ -397,6 +401,9 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 		rule.candidates.Cut() // The rule should not use candidates at this point as they all are null.
 		addtimer(CALLBACK(src, /datum/game_mode/dynamic/.proc/execute_roundstart_rule, rule), rule.delay)
 
+#ifdef EVENTMODE
+	return ..() // no intercept announcements during special events
+#endif
 	if (!CONFIG_GET(flag/no_intercept_report))
 		addtimer(CALLBACK(src, .proc/send_intercept), rand(waittime_l, waittime_h))
 
