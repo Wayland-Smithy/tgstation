@@ -1,4 +1,4 @@
-GLOBAL_LIST_INIT(team_chat_admin_ckeys, list("waylandsmithy", "exavere", "sacko"))
+GLOBAL_LIST_INIT(team_chat_admin_ckeys, list("waylandsmithy", "exavere", "sacko", "jaredfogle"))
 
 /obj/machinery/modular_computer/console/preset/teamchat
 	name = "internal team chat console"
