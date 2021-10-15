@@ -174,7 +174,7 @@ export const NtosNetTeamChat = (props, context) => {
           {!!in_channel && (
             <>
               <Stack.Divider />
-              <Stack.Item grow={1}>
+              <Stack.Item grow={2}>
                 <Stack vertical fill>
                   <Stack.Item grow>
                     <Section scrollable fill>

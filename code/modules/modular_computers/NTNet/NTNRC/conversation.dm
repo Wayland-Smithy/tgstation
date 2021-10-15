@@ -104,7 +104,7 @@
 /datum/ntnet_conversation/proc/changeop(datum/computer_file/program/chatclient/newop)
 	if(istype(newop))
 		operator = newop
-		//add_status_message("Channel operator status transferred to [newop.username].")
+		add_status_message("Channel operator status transferred to [newop.username].")
 
 /datum/ntnet_conversation/proc/change_title(newtitle, datum/computer_file/program/chatclient/renamer)
 	if(operator != renamer || strong)

@@ -77,6 +77,9 @@ GLOBAL_LIST_INIT(team_chat_admin_ckeys, list("waylandsmithy", "exavere", "sacko"
 		usr.team_chat_console.cpu.active_program = usr.team_chat_console.chatprogram
 	usr.team_chat_console.interact(usr)
 
+/datum/ntnet_conversation/changeop(datum/computer_file/program/chatclient/newop)
+	if(istype(newop))
+		operator = newop
 
 #define CHANNELNAME_SIZE 32
 #define MESSAGE_SIZE 2048
