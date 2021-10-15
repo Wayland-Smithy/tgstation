@@ -99,15 +99,6 @@ GLOBAL_LIST_INIT(team_chat_admin_ckeys, list("waylandsmithy", "exavere", "sacko"
 	program_icon = "comment-alt"
 	alert_able = TRUE
 
-/datum/computer_file/program/chatclient/team/New()
-	username = "DefaultTeamUser[rand(100, 999)]"
-
-/datum/computer_file/program/chatclient/team/Destroy()
-	for(var/datum/ntnet_conversation/discussion as anything in conversations)
-		discussion.purge_client(src)
-	conversations.Cut()
-	return ..()
-
 /datum/computer_file/program/chatclient/team/ui_status(mob/user)
 	if(program_state != PROGRAM_STATE_ACTIVE) // Our program was closed. Close the ui if it exists.
 		return UI_CLOSE
@@ -138,6 +129,16 @@ GLOBAL_LIST_INIT(team_chat_admin_ckeys, list("waylandsmithy", "exavere", "sacko"
 			var/mob/living/user = usr
 			user.log_talk(message, LOG_CHAT, tag="as [username] to channel [channel.title]")
 			return TRUE
+		if("PRG_joinchannel")
+			var/new_target = text2num(params["id"])
+			if(isnull(new_target) || new_target == active_channel)
+				return
+
+			active_channel =  new_target
+			channel = SSnetworks.station_network.get_chat_channel_by_id(new_target)
+			if((!(src in channel.active_clients) && !(src in channel.offline_clients)) && !channel.password)
+				channel.add_client(src)
+			return TRUE
 		if("PRG_renamechannel")
 			if(!authed)
 				return
@@ -159,42 +160,6 @@ GLOBAL_LIST_INIT(team_chat_admin_ckeys, list("waylandsmithy", "exavere", "sacko"
 			var/datum/computer_file/program/chatclient/team/pinged = locate(params["ref"]) in channel.active_clients + channel.offline_clients
 			channel.ping_user(src, pinged)
 			return TRUE
-
-/datum/computer_file/program/chatclient/team/process_tick()
-	. = ..()
-	var/datum/ntnet_conversation/channel = SSnetworks.station_network.get_chat_channel_by_id(active_channel)
-	if(program_state != PROGRAM_STATE_KILLED)
-		ui_header = "ntnrc_idle.gif"
-		if(channel)
-			// Remember the last message. If there is no message in the channel remember null.
-			last_message = length(channel.messages) ? channel.messages[length(channel.messages)] : null
-		else
-			last_message = null
-		return TRUE
-	if(channel?.messages?.len)
-		ui_header = last_message == channel.messages[length(channel.messages)] ? "ntnrc_idle.gif" : "ntnrc_new.gif"
-	else
-		ui_header = "ntnrc_idle.gif"
-
-/datum/computer_file/program/chatclient/team/run_program(mob/living/user)
-	. = ..()
-	if(!.)
-		return
-	for(var/datum/ntnet_conversation/channel as anything in SSnetworks.station_network.chat_channels)
-		if(src in channel.offline_clients)
-			channel.offline_clients.Remove(src)
-			channel.active_clients.Add(src)
-
-/datum/computer_file/program/chatclient/team/kill_program(forced = FALSE)
-	for(var/datum/ntnet_conversation/channel as anything in SSnetworks.station_network.chat_channels)
-		channel.go_offline(src)
-	active_channel = null
-	..()
-
-/datum/computer_file/program/chatclient/team/ui_static_data(mob/user)
-	var/list/data = list()
-	data["can_admin"] = can_run(user, FALSE, ACCESS_NETWORK)
-	return data
 
 /datum/computer_file/program/chatclient/team/ui_data(mob/user)
 	if(!SSnetworks.station_network || !SSnetworks.station_network.chat_channels)

@@ -32,7 +32,6 @@ GLOBAL_LIST_INIT_TYPED(tournament_teams, /datum/tournament_team, get_tournament_
 
 	var/datum/ntnet_conversation/team_chat = new
 	team_chat.title = name
-	team_chat.strong = TRUE
 	team_chat.password = random_string(32, GLOB.alphabet + GLOB.alphabet_upper + GLOB.numerals)
 	tournament_team.team_chat = team_chat
 

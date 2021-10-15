@@ -56,7 +56,7 @@
 /obj/item/modular_computer/processor/alert_call(datum/computer_file/program/caller, alerttext)
 	if(mob_user && caller && alerttext)
 		mob_user.playsound_local(get_turf(mob_user), 'sound/machines/twobeep_high.ogg', 50, TRUE)
-		to_chat(mob_user, span_notice("The [src] displays a [caller.filedesc] notification: [alerttext]"))
+		to_chat(mob_user, span_notice("\The [src] displays a notification: [alerttext]"))
 		return
 	if(!caller || !caller.alert_able || caller.alert_silenced || !alerttext)
 		return
