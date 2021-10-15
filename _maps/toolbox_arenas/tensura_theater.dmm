@@ -57,7 +57,9 @@
 /turf/open/floor/iron/grimy,
 /area/tdome/arena)
 "tE" = (
-/turf/closed/indestructible/opshuttle,
+/turf/closed/indestructible/opshuttle{
+	opacity = 0
+	},
 /area/tdome/arena)
 "xG" = (
 /obj/effect/turf_decal/siding/wideplating/dark,
@@ -106,9 +108,12 @@
 	name = "Film Projector"
 	},
 /obj/item/flashlight/lantern/syndicate{
-	pixel_y = 25
+	name = "Projector Lense";
+	pixel_y = 18
 	},
-/turf/closed/indestructible/opshuttle,
+/turf/closed/indestructible/opshuttle{
+	opacity = 0
+	},
 /area/tdome/arena)
 "Cy" = (
 /obj/structure/chair/comfy/brown{
@@ -174,7 +179,9 @@
 /turf/open/floor/iron/grimy,
 /area/tdome/arena)
 "US" = (
-/turf/closed/indestructible/oldshuttle,
+/turf/closed/indestructible/oldshuttle{
+	opacity = 0
+	},
 /area/tdome/arena)
 "WU" = (
 /turf/open/floor/iron/dark/textured_half,

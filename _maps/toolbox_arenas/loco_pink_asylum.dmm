@@ -104,7 +104,9 @@
 /turf/open/floor/iron/white/side,
 /area/tdome/arena)
 "KS" = (
-/turf/closed/indestructible/oldshuttle,
+/turf/closed/indestructible/oldshuttle{
+	opacity = 0
+	},
 /area/tdome/arena)
 "MM" = (
 /obj/machinery/shower{
