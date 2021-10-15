@@ -18,9 +18,6 @@ GLOBAL_LIST_INIT(team_chat_admin_ckeys, list("waylandsmithy", "exavere", "sacko"
 	chatprogram.computer = cpu
 	hard_drive.store_file(chatprogram)
 	hard_drive.max_capacity = chatprogram.size
-	chatprogram.username = "Placeholder Username"
-	chatprogram.program_state = PROGRAM_STATE_ACTIVE
-	cpu.active_program = chatprogram
 
 /mob
 	var/obj/machinery/modular_computer/console/preset/teamchat/team_chat_console
@@ -160,6 +157,15 @@ GLOBAL_LIST_INIT(team_chat_admin_ckeys, list("waylandsmithy", "exavere", "sacko"
 			var/datum/computer_file/program/chatclient/team/pinged = locate(params["ref"]) in channel.active_clients + channel.offline_clients
 			channel.ping_user(src, pinged)
 			return TRUE
+
+/datum/computer_file/program/chatclient/team/ui_close(mob/user)
+	if(program_state != PROGRAM_STATE_KILLED)
+		kill_program(forced = TRUE)
+
+/datum/computer_file/program/chatclient/team/kill_program(forced)
+	var/last_active = active_channel
+	. = ..()
+	active_channel = last_active
 
 /datum/computer_file/program/chatclient/team/ui_data(mob/user)
 	if(!SSnetworks.station_network || !SSnetworks.station_network.chat_channels)
