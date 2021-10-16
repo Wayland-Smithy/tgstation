@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "b" = (
 /turf/open/floor/bronze,
-/area/space)
+/area/tdome/arena)
 "d" = (
 /obj/structure/fluff/clockwork{
 	density = 1;
@@ -11,41 +11,41 @@
 	resistance_flags = 64
 	},
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "e" = (
 /obj/structure/fluff/clockwork/alloy_shards,
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "f" = (
 /obj/item/stack/sheet/bronze/thirty,
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "g" = (
 /obj/item/clothing/shoes/bronze,
 /turf/open/floor/bronze,
-/area/space)
+/area/tdome/arena)
 "h" = (
 /obj/structure/girder/bronze,
 /turf/open/floor/bronze,
-/area/space)
+/area/tdome/arena)
 "i" = (
 /obj/structure/window/bronze/fulltile,
 /turf/open/floor/bronze,
-/area/space)
+/area/tdome/arena)
 "j" = (
 /obj/structure/table_frame{
 	framestack = /obj/item/stack/sheet/bronze;
 	icon_state = "brass_frame"
 	},
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "k" = (
 /obj/structure/fluff/clockwork/alloy_shards,
 /turf/open/floor/bronze,
-/area/space)
+/area/tdome/arena)
 "l" = (
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "m" = (
 /obj/structure/fluff/clockwork{
 	density = 1;
@@ -65,19 +65,18 @@
 	resistance_flags = 64
 	},
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "n" = (
 /obj/item/wrench{
 	icon_state = "wrench_brass"
 	},
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "o" = (
 /obj/item/banhammer{
 	desc = "A very REAL ratvarian spear.";
 	icon = 'icons/obj/clockwork_objects.dmi';
 	icon_state = "ratvarian_spear";
-	item_state = "ratvarian_spear";
 	lefthand_file = 'icons/mob/inhands/antag/clockwork_lefthand.dmi';
 	name = "toy spear";
 	righthand_file = 'icons/mob/inhands/antag/clockwork_righthand.dmi'
@@ -85,40 +84,40 @@
 /obj/structure/table/bronze,
 /obj/item/toy/clockwork_watch,
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "p" = (
 /obj/item/crowbar{
 	icon_state = "crowbar_brass"
 	},
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "q" = (
 /obj/structure/table_frame{
 	framestack = /obj/item/stack/sheet/bronze;
 	icon_state = "brass_frame"
 	},
 /turf/open/floor/bronze,
-/area/space)
+/area/tdome/arena)
 "r" = (
 /obj/structure/fluff/clockwork/alloy_shards/large,
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "s" = (
 /obj/item/clothing/shoes/bronze,
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "I" = (
 /obj/structure/fluff/clockwork/blind_eye,
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "O" = (
 /obj/structure/fluff/clockwork/clockgolem_remains,
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 "X" = (
 /obj/item/stack/tile/bronze,
 /turf/open/floor/bronze/flat,
-/area/space)
+/area/tdome/arena)
 
 (1,1,1) = {"
 l

@@ -1,70 +1,31 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /obj/effect/turf_decal/stripes/corner,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 6
-	},
-/turf/open/floor/iron/dark,
-/area/tdome/arena)
-"b" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
 /area/tdome/arena)
 "c" = (
 /turf/open/floor/bluespace,
 /area/tdome/arena)
-"d" = (
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 4
-	},
-/turf/open/floor/iron/dark,
-/area/tdome/arena)
-"e" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 4
-	},
-/turf/open/floor/iron/dark,
-/area/tdome/arena)
 "f" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 10
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
 /area/tdome/arena)
 "g" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
 /area/tdome/arena)
 "h" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 5
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
 /area/tdome/arena)
 "i" = (
@@ -72,35 +33,6 @@
 	dir = 8
 	},
 /turf/open/floor/bluespace,
-/area/tdome/arena)
-"j" = (
-/obj/effect/turf_decal/box/white/corners{
-	dir = 1
-	},
-/obj/effect/turf_decal/stripes/corner,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/tdome/arena)
-"k" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 4
-	},
-/turf/open/floor/engine,
-/area/tdome/arena)
-"l" = (
-/obj/effect/turf_decal/box/white/corners{
-	dir = 4
-	},
-/obj/effect/turf_decal/stripes/corner{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 10
-	},
-/turf/open/floor/engine,
 /area/tdome/arena)
 "m" = (
 /turf/open/floor/iron/bluespace,
@@ -114,20 +46,12 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/corner,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 6
-	},
-/turf/open/floor/engine,
-/area/tdome/arena)
-"p" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/engine,
 /area/tdome/arena)
 "q" = (
 /obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/engine,
 /area/tdome/arena)
 "r" = (
@@ -137,6 +61,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/engine,
 /area/tdome/arena)
 "s" = (
@@ -209,18 +134,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 6
-	},
-/turf/open/floor/engine,
-/area/tdome/arena)
-"C" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 10
-	},
 /turf/open/floor/engine,
 /area/tdome/arena)
 "D" = (
@@ -229,18 +142,6 @@
 	},
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 5
-	},
-/turf/open/floor/engine,
-/area/tdome/arena)
-"E" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 10
 	},
 /turf/open/floor/engine,
 /area/tdome/arena)
@@ -255,9 +156,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 5
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/engine,
 /area/tdome/arena)
 "H" = (
@@ -267,18 +166,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 9
-	},
-/turf/open/floor/engine,
-/area/tdome/arena)
-"I" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 6
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/engine,
 /area/tdome/arena)
 "J" = (
@@ -286,45 +174,20 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 9
-	},
 /turf/open/floor/engine,
-/area/tdome/arena)
-"K" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 10
-	},
-/turf/open/floor/iron/dark,
-/area/tdome/arena)
-"L" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 6
-	},
-/turf/open/floor/iron/dark,
 /area/tdome/arena)
 "M" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 5
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
 /area/tdome/arena)
 "N" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
 /area/tdome/arena)
 "O" = (
@@ -335,27 +198,21 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
 /area/tdome/arena)
 "P" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
 /area/tdome/arena)
 "Q" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
 /area/tdome/arena)
 "S" = (
@@ -366,25 +223,8 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
-/area/tdome/arena)
-"U" = (
-/obj/effect/turf_decal/caution{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
-/turf/open/floor/bluespace,
-/area/tdome/arena)
-"V" = (
-/obj/effect/turf_decal/caution{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
-/turf/open/floor/bluespace,
 /area/tdome/arena)
 "W" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
@@ -405,27 +245,27 @@ a
 g
 Y
 c
-Y
 c
-K
+Y
+N
 M
 "}
 (2,1,1) = {"
-b
+g
 c
-U
 i
-U
+i
+i
 i
 c
 N
 "}
 (3,1,1) = {"
 Y
-c
-j
+Y
+o
 t
-C
+t
 D
 c
 Y
@@ -433,17 +273,17 @@ Y
 (4,1,1) = {"
 Y
 c
-k
+q
 u
 u
-E
-Y
+F
+c
 Y
 "}
 (5,1,1) = {"
-d
+S
 c
-k
+q
 v
 v
 F
@@ -453,7 +293,7 @@ O
 (6,1,1) = {"
 Y
 c
-l
+r
 w
 w
 G
@@ -471,13 +311,13 @@ c
 Y
 "}
 (8,1,1) = {"
-d
+S
 c
 n
 x
 n
 X
-c
+Y
 O
 "}
 (9,1,1) = {"
@@ -502,8 +342,8 @@ Y
 "}
 (11,1,1) = {"
 S
-Y
-p
+c
+q
 z
 z
 F
@@ -516,25 +356,25 @@ c
 q
 A
 A
-I
-Y
+F
+c
 Y
 "}
 (13,1,1) = {"
 Y
-c
+Y
 r
 B
-w
+B
 J
 c
 Y
 "}
 (14,1,1) = {"
-e
+h
 c
 s
-V
+s
 s
 s
 c
@@ -543,10 +383,10 @@ P
 (15,1,1) = {"
 f
 h
-c
 Y
 c
 c
-L
+Y
+P
 Q
 "}
