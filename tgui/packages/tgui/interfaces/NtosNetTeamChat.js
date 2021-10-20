@@ -100,10 +100,10 @@ export const NtosNetTeamChat = (props, context) => {
       height={675}>
       <NtosWindow.Content>
         <Stack fill>
-          <Stack.Item>
-            <Section fill>
-              <Stack vertical fill>
-                <Stack.Item grow>
+          <Stack.Item grow={2}>
+            <Stack vertical fill>
+              <Stack.Item grow>
+                <Section scrollable fill>
                   {all_channels.map(channel => (
                     <Button
                       fluid
@@ -115,9 +115,9 @@ export const NtosNetTeamChat = (props, context) => {
                         id: channel.id,
                       })} />
                   ))}
-                </Stack.Item>
-              </Stack>
-            </Section>
+                </Section>
+              </Stack.Item>
+            </Stack>
           </Stack.Item>
           <Stack.Divider />
           <Stack.Item grow={5}>
